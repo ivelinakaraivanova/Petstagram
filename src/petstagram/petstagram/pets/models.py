@@ -22,6 +22,7 @@ class Pet(models.Model):
     type = models.CharField(max_length=6, choices=TYPE_CHOICES)
     name = models.CharField(max_length=6)
     age = models.PositiveIntegerField()
+
     # age = models.IntegerField(
     #     null=False,
     #     blank=False,
@@ -30,8 +31,12 @@ class Pet(models.Model):
     #         # is_positive
     #     ],
     # )
+
     description = models.TextField()
     image_url = models.URLField()
+
+    # def __str__(self):
+    #     return f'{self.name}, {self.age}, {self.type}'
 
 
 class Like(models.Model):
