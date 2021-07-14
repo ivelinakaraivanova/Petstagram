@@ -33,8 +33,10 @@ class Pet(models.Model):
     # )
 
     description = models.TextField()
-    image_url = models.URLField()
-
+    # image_url = models.URLField()
+    image = models.ImageField(
+        upload_to='pets',
+    )
     # def __str__(self):
     #     return f'{self.name}, {self.age}, {self.type}'
 
