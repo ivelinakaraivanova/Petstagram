@@ -12,7 +12,7 @@ from petstagram.settings import MEDIA_ROOT
 class CreatePetForm(BootstrapFormMixin, forms.ModelForm):
     class Meta:
         model = Pet
-        fields = '__all__'
+        exclude = ('user',)
         widgets = {
             'name': forms.TextInput(
                 attrs={
@@ -34,7 +34,7 @@ class EditPetForm(CreatePetForm):
 
     class Meta:
         model = Pet
-        fields = '__all__'
+        exclude = ('user',)
         widgets = {
             'type': forms.TextInput(
                 attrs={
