@@ -1,2 +1,2 @@
 # Petstagram
-My first Django project
+SoftUni Django project 
